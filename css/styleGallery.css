@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 19px;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+}
+
+.header .title .cl_icon 
+{
+    width: 50px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    margin-right: 0px;
+    margin-left: 130px;
+    vertical-align: middle;
+}
+
+.header .title a
+{
+    margin-left: -30px;
+    text-decoration: none;
+    font-size: 24px;
+    color: black;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.header .nav 
+{
+    float: right;
+    margin-right: 100px;
+    margin-top: -70px;
+}
+
+.header .nav li
+{
+    display: inline-block;
+    list-style: none;
+    margin: 0 10px;
+    font-weight: 400;
+}
+
+.header .nav li a
+{
+    text-decoration: none;
+    color: #b9b9b9;
+    font-size: 16px;
+}
+
+.header .nav li a:hover
+{
+    color: black;
+}
+
+.header .nav li.selected a 
+{
+    border-bottom: 2px solid #000;
+    color: black;
+    padding-bottom: 3px;
+}
+
+.header .nav li.sup a
+{
+    color: #00008b;
+    border: 2.5px solid #00008b;
+    padding: 0.5em;
+}
+
+.header .nav li.sup a:hover
+{
+    background-color: #00008b;
+    color: rgb(255, 255, 255);
+    transition-duration: 0.4s;
+}
+
+.hero .text {
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.container {
+    width: 100%;
+    max-width: 120rem;
+    margin: auto;
+    padding: 0 1.5rem;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1.5rem;
+    grid-template-areas: 
+        /* 'img-1 img-2 img-3 img-3'
+        'img-1 img-4 img-5 img-6'
+        'img-7 img-7 img-8 img-6'; */
+        'img-1 img-2 img-3'
+        'img-4 img-5 img-6'
+        'img-7 img-8 img-9';
+}
+
+.image-gallery a{
+    width: 100%;
+    height: 25rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.image-gallery a i {
+    /* color: rgb(255, 255, 255, .6); */
+    font-size: 3rem;
+    position: relative;
+    z-index: 100;
+    padding: 1rem 3rem;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 0.4rem;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.image-gallery a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.image-gallery a:hover i, 
+.image-gallery a:hover::before {
+    opacity: 1;
+}
+
+.img-1{
+    grid-area: img-1;
+    /* min-height: 51.5rem; */
+    background-image: url("../images/img-1.jpg");
+}
+
+.img-2{
+    grid-area: img-2;
+    background-image: url("../images/img-2.jpg");
+}
+
+.img-3{
+    grid-area: img-3;
+    background-image: url("../images/img-3.jpg");
+}
+
+.img-4{
+    grid-area: img-4;
+    background-image: url("../images/img-4.png");
+}
+
+.img-5{
+    grid-area: img-5;
+    background-image: url("../images/img-5.png");
+}
+
+.img-6{
+    grid-area: img-6;
+    /* min-height: 51.5rem; */
+    background-image: url("../images/img-6.png");
+}
+
+.img-7{
+    grid-area: img-7;
+    background-image: url("../images/img-7.png");
+}
+
+.img-8{
+    grid-area: img-8;
+    background-image: url("../images/img-8.jpg");
+}
+
+.img-9{
+    grid-area: img-9;
+    background-image: url("../images/img-9.jpg");
+}
+
+.footer{
+    margin-top: 110px;
+    width: 100vw;
+    display: block;
+    overflow: hidden;
+    padding: 70px 0;
+    box-sizing: border-box;
+    background: linear-gradient(180deg, #E9FAFF 0%, rgba(233, 250, 255, 0) 100%);
+}
+
+.inner_footer {
+    display: block;
+    margin: 0 auto;
+    width: 1100px;
+    height: 100%;
+}
+
+.inner_footer .footer_third {
+    width: calc()21.667% - 20px;
+    margin-right: 10px;
+    float: left;
+    height: 100%;
+    padding-left: 150px;
+}
+
+.inner_footer .footer_third:last-child {
+    margin-right: 0px;
+}
+
+.inner_footer .footer_third h3 {
+    font-size: 20px;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color:#00008b;
+}
+
+.inner_footer .footer_third a {
+    font-size: 15px;
+    display: block;
+    width: 100%;
+    padding-bottom: 5px;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
